@@ -6,8 +6,7 @@ const cron = require("node-cron");
 async function AutoDm() {
   const text = await generateMessage();
   const recipient_id = "369098139";
-  console.log(text);
-  // sendMessage({ text, recipient_id });
+  sendMessage({ text, recipient_id });
 }
 function sendMessage({ recipient_id, text }) {
   T.post("direct_messages/events/new", {
@@ -30,7 +29,7 @@ function sendMessage({ recipient_id, text }) {
       console.error("error", err);
     });
 }
-
+console.log("Testing...");
 cron.schedule("* 7 * * *", () => {
   console.log("running  task every 7 am");
   AutoDm();
