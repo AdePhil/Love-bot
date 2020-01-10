@@ -1,1 +1,1 @@
-Worker: node autodm.js
+worker: node autodm.js
