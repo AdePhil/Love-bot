@@ -1,7 +1,7 @@
 require("dotenv").config();
 const T = require("./twit");
 const generateMessage = require("./message");
-const cron = require("node-cron");
+// const cron = require("node-cron");
 
 async function AutoDm() {
   const text = await generateMessage();
@@ -30,8 +30,8 @@ function sendMessage({ recipient_id, text }) {
     });
 }
 console.log("Testing...");
-cron.schedule("20 7 * * *", () => {
-  console.log("running  task every 7 am");
-  AutoDm();
-});
-// AutoDm();
+// cron.schedule("20 7 * * *", () => {
+//   console.log("running  task every 7 am");
+//   AutoDm();
+// });
+AutoDm();
