@@ -5,7 +5,7 @@ const generateMessage = require("./message");
 
 async function AutoDm() {
   const text = await generateMessage();
-  const recipient_id = "369098139";
+  const recipient_id = "1194933058950045696";
   sendMessage({ text, recipient_id });
 }
 function sendMessage({ recipient_id, text }) {
