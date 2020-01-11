@@ -1,7 +1,9 @@
 const puppeteer = require("puppeteer");
 
 async function fetchLoveMessage(url) {
-  const browser = await puppeteer.launch();
+  const browser = puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"]
+  });
   const page = await browser.newPage();
   await page.goto(url);
   const [el] = await page.$x('//*[@id="random"]');
