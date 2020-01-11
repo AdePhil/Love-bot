@@ -30,7 +30,7 @@ function sendMessage({ recipient_id, text }) {
     });
 }
 console.log("Testing...");
-cron.schedule("* 7 * * *", () => {
+cron.schedule("20 7 * * *", () => {
   console.log("running  task every 7 am");
   AutoDm();
 });
